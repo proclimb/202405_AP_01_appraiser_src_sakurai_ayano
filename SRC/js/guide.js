@@ -66,7 +66,7 @@ function fnGuideMove(muki, articleNo) {
 		// 名称の取得
 		var articleName = $(obj.children()[0]).text();
 		var articleRoom = $(obj.children()[1]).text();
-		var articleKey = $(obj.children()[2]).text();
+		var articleKey = $(obj.children()[2]).html();
 
 		// 登録リストに保存(右側に移動)
 		tags = "<tr id=\"r" + articleNo + "\">";
@@ -86,7 +86,7 @@ function fnGuideMove(muki, articleNo) {
 		tags += "<td>" + articleRoom + "</td>";
 
 		// 鍵情報の作成
-		tags += "<td>" + articleKey;
+		tags += "<td>" + articleKey + "</td>";
 		tags += "</tr>";
 
 		// 登録側に追加
